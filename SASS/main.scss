@@ -29,6 +29,9 @@ img {
 p {
   margin: 0;
 }
+a {
+  display: block;
+}
 :root {
   --main-text-cl: #757575;
   --accent-cl: #2196f3;
@@ -113,26 +116,29 @@ p {
   position: relative;
 }
 
+.nav-link {
+  color: var(--accent-cl);
+}
+
 .nav-link::after {
   display: block;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 32px;
   width: 100%;
   height: 4px;
   background-color: var(--accent-cl);
   border-radius: 2px;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .nav-link:hover::after,
 .nav-link:focus::after,
 .nav-link:active::after {
-  transform: scaleX(1);
+  transform: scaleX(0);
 }
 
 .about {
@@ -268,17 +274,17 @@ p {
 }
 
 .icon-antenna::before {
-  background-image: url(../images/antenna.png);
+  background-image: url(../images/icons/antenna.svg);
 }
 
 .icon-clock::before {
-  background-image: url(../images/clock.png);
+  background-image: url(../images/icons/clock.svg);
 }
 .icon-diagram::before {
-  background-image: url(../images/diagram.png);
+  background-image: url(../images/icons/diagram.svg);
 }
 .icon-astronaut::before {
-  background-image: url(../images/astronaut.png);
+  background-image: url(../images/icons/astronaut.svg);
 }
 
 .menu-link {
@@ -288,7 +294,8 @@ p {
   letter-spacing: 0.02em;
   color: #212121;
 }
-address {
+.address {
+  margin-top: 20px;
   font-style: normal;
 }
 
@@ -375,9 +382,10 @@ address {
 }
 
 .foot-address-block {
+  font-style: normal;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 9px;
 }
 
 .all-title {
@@ -397,7 +405,6 @@ address {
 .portfolio-index {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
 }
 
 .portfolio-container {
@@ -431,12 +438,13 @@ address {
 .btn-portfolio:focus {
   color: var(--white);
   background-color: var(--accent-cl);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .samples {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 34px;
+  margin-top: 54px;
 }
 
 .samples-items {
@@ -461,8 +469,18 @@ address {
   margin-bottom: 0px;
 }
 
+.sample-items__link {
+  text-decoration: none;
+}
+
+.sample-items__link:hover .popup-window,
+.sample-items__link:focus .popup-window {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 .sample-small-container {
-  margin: 20px 24px;
+  padding: 20px 24px;
 }
 
 .social-icons {
@@ -491,7 +509,13 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icons-link:hover .social-icons-svg {
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-cl);
+}
+
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg {
   fill: var(--white);
 }
 
@@ -522,12 +546,18 @@ address {
   width: 16px;
   margin-right: 10px;
   fill: var(--main-text-cl);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cnt-item-svg-tel {
   height: 16px;
   width: 10px;
   margin-right: 10px;
   fill: var(--main-text-cl);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-item {
@@ -536,7 +566,10 @@ address {
 
 .mail-tele-address {
   color: var(--rgba);
-  margin-top: 9px;
+}
+
+.mail-tele-address:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .contacts:hover .cnt-item-svg-mail,
@@ -560,7 +593,7 @@ address {
 }
 
 .client-icon-item {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -577,15 +610,25 @@ address {
   margin-right: 30px;
 }
 
+.client-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.client-icon-link:hover .client-icon-svg,
+.client-icon-link:focus .client-icon-svg {
+  fill: var(--accent-cl);
+}
+
 .client-icon-svg {
   fill: var(--icons-color);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-icon-item:hover .client-icon-svg {
-  fill: var(--accent-cl);
-}
+
 .client-icon-item:hover {
   border: 1px solid var(--accent-cl);
 }
@@ -623,7 +666,8 @@ address {
   height: 86px;
 }
 
-.social-icons-link:hover {
+.social-icons-link:hover,
+.social-icons-link:focus {
   background-color: var(--accent-cl);
 }
 
@@ -708,16 +752,16 @@ textarea {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 10px;
 }
 
-.modal-input-label {
+.modal-inputs .modal-input-label {
   width: 448px;
   height: 40px;
   padding-left: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 10px;
   outline: none;
 }
 
@@ -736,10 +780,10 @@ textarea {
 
 .comment-box {
   padding: 12px 16px;
-  margin-bottom: 20px;
   max-width: 100%;
   min-width: 100%;
   min-height: 120px;
+  margin-bottom: 0px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: none;
   border-radius: 4px;
@@ -760,6 +804,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .checkbox-text {
   margin-left: 23px;
@@ -768,6 +813,7 @@ textarea {
   color: var(--main-text-cl);
 }
 .checkbox-agr-link {
+  display: inline-flex;
   color: var(--accent-cl);
 }
 .checkbox-icon {
@@ -788,12 +834,12 @@ textarea {
   fill: var(--white);
 }
 
-.old-checkbox:checked ~ .checkbox-icon {
+.old-checkbox:focus:checked ~ .checkbox-icon {
   background-color: #2196f3;
   border: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.old-checkbox:checked ~ .checkbox-text {
+.old-checkbox :checked ~ .checkbox-text {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -823,6 +869,7 @@ textarea {
   background-color: rgba(33, 150, 243, 1);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
+  border: none;
 }
 
 /*Portfolio: popup-window*/
@@ -851,8 +898,6 @@ textarea {
 
 .samples-items:hover .popup-window {
   opacity: 1;
-}
-.samples-items:hover .popup-window {
   transform: translateY(0%);
 }
 
