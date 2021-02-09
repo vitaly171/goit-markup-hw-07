@@ -70,7 +70,7 @@ a {
   margin-right: auto;
   height: 80px;
 }
-.menu {
+.header__menu {
   display: inline-flex;
 }
 

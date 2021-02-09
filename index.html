@@ -21,36 +21,36 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header-conteiner">
-        <nav class="navigation">
+      <div class="container header__conteiner">
+        <nav class="header__navigation">
           <a href="index.html" class="link logo"
             >Web<span class="logo-studio">Studio</span></a
           >
-          <ul class="list menu">
-            <li class="menu-link">
-              <a href="./index.html" class="link nav-link">Студия</a>
+          <ul class="list">
+            <li class="header__item">
+              <a href="./index.html" class="link current-page">Студия</a>
             </li>
-            <li class="menu-link">
+            <li class="header__item">
               <a href="./portfolio.html" class="link">Портфолио</a>
             </li>
-            <li class="menu-link">
+            <li class="header__item">
               <a href="" class="link">Контакты</a>
             </li>
           </ul>
         </nav>
 
         <ul class="list">
-          <li class="contact-item">
-            <a href="mailto:info@devstudio.com" class="link contacts">
-              <svg class="cnt-item-svg-mail">
+          <li class="header__contact">
+            <a href="mailto:info@devstudio.com" class="link header__contact-link">
+              <svg class="header__icon-mail">
                 <use href="./images/icons/sprite.svg#envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="contact-item">
-            <a href="tel:+380961111111" class="link contacts">
-              <svg class="cnt-item-svg-tel">
+          <li class="header__contact">
+            <a href="tel:+380961111111" class="link header__contact-link">
+              <svg class="header__icon-tel">
                 <use href="./images/icons/sprite.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -61,39 +61,39 @@
     </header>
     <main>
       <section class="hero">
-        <div class="hero-title">
-          <h1 class="page-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="btn" data-modal-open>Заказать услугу</button>
+        <div class="hero__content">
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <button class="hero__btn" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
       <section class="skills">
         <div class="container">
           <ul class="list">
-            <li class="skills-item icon-antenna">
-              <h3 class="section-minor-title">Внимание к деталям</h3>
-              <p class="main-text">
+            <li class="skills__item skills__icon-antenna">
+              <h3 class="skills__title">Внимание к деталям</h3>
+              <p class="skills__text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="skills-item icon-clock">
-              <h3 class="section-minor-title">Пунктуальность</h3>
-              <p class="main-text">
+            <li class="skills__item skills__icon-clock">
+              <h3 class="skills__title">Пунктуальность</h3>
+              <p class="skills__text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="skills-item icon-diagram">
-              <h3 class="section-minor-title">Планирование</h3>
-              <p class="main-text">
+            <li class="skills__item skills__icon-diagram">
+              <h3 class="skills__title">Планирование</h3>
+              <p class="skills__text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="skills-item icon-astronaut">
-              <h3 class="section-minor-title">Современные технологии</h3>
-              <p class="main-text">
+            <li class="skills__item skills__icon-astronaut">
+              <h3 class="skills__title">Современные технологии</h3>
+              <p class="skills__text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -107,10 +107,10 @@
       <section class="about">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
-          <ul class="list about-itens">
-            <li class="about-img">
-              <div class="box-about">
-                <h3 class="box-title">Десктопные приложения</h3>
+          <ul class="list about__list">
+            <li class="about__item">
+              <div class="about__overlay">
+                <h3 class="about__overlay-text">Десктопные приложения</h3>
               </div>
               <img
                 src="./images/tab_code.jpg"
@@ -119,9 +119,9 @@
                 height="294"
               />
             </li>
-            <li class="about-img">
-              <div class="box-about">
-                <h3 class="box-title">Мобильные приложения</h3>
+            <li class="about__item">
+              <div class="about__overlay">
+                <h3 class="about__overlay-text">Мобильные приложения</h3>
               </div>
               <img
                 src="./images/mobile_device.jpg"
@@ -130,9 +130,9 @@
                 height="294"
               />
             </li>
-            <li class="about-img">
-              <div class="box-about">
-                <h3 class="box-title">Дизайнерские решения</h3>
+            <li class="about__item">
+              <div class="about__overlay">
+                <h3 class="about__overlay-text">Дизайнерские решения</h3>
               </div>
               <img
                 src="./images/tab_color.jpg"
@@ -507,7 +507,7 @@
             </address>
           </div>
           <div class="footer-social">
-            <h3 class="section-minor-title">присоединяйтесь</h3>
+            <h3 class="skills__title">присоединяйтесь</h3>
             <ul class="list social-icons">
               <li class="social-icons-item">
                 <a class="social-icons-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferer"
@@ -541,7 +541,7 @@
             </ul>
           </div>
           <div class="footer-signature">
-            <h3 class="section-minor-title">Подпишитесь на рассылку</h3>
+            <h3 class="skills__title">Подпишитесь на рассылку</h3>
             <form class="social-icons">
               <label>
                 <input class="input-mail" type="email" name="mail" placeholder="E-mail" />
