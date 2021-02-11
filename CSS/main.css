@@ -41,80 +41,6 @@ textarea {
   resize: none;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link:hover,
-.link:focus {
-  color: #2196f3;
-}
-
-.current-page {
-  color: #2196f3;
-}
-
-.current-page::after {
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 32px;
-  width: 100%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.current-page:hover::after,
-.current-page:focus::after,
-.current-page:active::after {
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-}
-
-.section-title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  color: #212121;
-}
-
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -191,6 +117,12 @@ textarea {
   margin-right: 30px;
 }
 
+.header__contact {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header__icon-mail {
   height: 12px;
   width: 16px;
@@ -202,6 +134,11 @@ textarea {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__contact-link:hover .header__icon-mail,
+.header__contact-link:focus .header__icon-mail {
+  fill: #2196f3;
 }
 
 .header__icon-tel {
@@ -217,75 +154,9 @@ textarea {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header__contact {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__contact-link:hover .header__icon-mail,
-.header__contact-link:focus .header__icon-mail {
-  fill: #2196f3;
-}
-
 .header__contact-link:hover .header__icon-tel,
 .header__contact-link:focus .header__icon-tel {
   fill: #2196f3;
-}
-
-.about {
-  padding-bottom: 94px;
-}
-
-.about__list > .about__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.about__item {
-  position: relative;
-  height: 294px;
-}
-
-.about__overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  background: rgba(47, 48, 58, 0.8);
-}
-
-.about__overlay-text {
-  margin: 0;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.143;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-}
-
-.skills__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  color: #212121;
-  text-transform: uppercase;
-}
-
-.footer .skills__title {
-  color: #ffffff;
-  margin-bottom: 0;
 }
 
 .hero {
@@ -343,9 +214,66 @@ textarea {
   color: #ffffff;
 }
 
+.about {
+  padding-bottom: 94px;
+}
+
+.about__list .about__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about__item {
+  position: relative;
+  height: 294px;
+}
+
+.about__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.about__overlay-text {
+  margin: 0;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.143;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
 .skills {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.skills__text {
+  margin-top: 0%;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #757575;
+}
+
+.skills__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  color: #212121;
+  text-transform: uppercase;
 }
 
 .skills__item {
@@ -374,32 +302,20 @@ textarea {
   background-position: center;
 }
 
-.skills__icon-antenna::before {
+.skills__icon-antenna:before {
   background-image: url(../images/icons/antenna.svg);
 }
 
-.skills__icon-clock::before {
+.skills__icon-clock:before {
   background-image: url(../images/icons/clock.svg);
 }
 
-.skills__icon-diagram::before {
+.skills__icon-diagram:before {
   background-image: url(../images/icons/diagram.svg);
 }
 
-.skills__icon-astronaut::before {
+.skills__icon-astronaut:before {
   background-image: url(../images/icons/astronaut.svg);
-}
-
-.footer__address {
-  margin-top: 20px;
-  font-style: normal;
-}
-
-.skills__text {
-  margin-top: 0%;
-  font-size: 14px;
-  line-height: 1.71;
-  color: #757575;
 }
 
 .team {
@@ -435,6 +351,100 @@ textarea {
   color: #757575;
 }
 
+.team__name {
+  margin-bottom: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.187;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover,
+.link:focus {
+  color: #2196f3;
+}
+
+.current-page {
+  color: #2196f3;
+}
+
+.current-page::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current-page:hover::after,
+.current-page:focus::after,
+.current-page:active::after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.section-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  color: #212121;
+}
+
+.footer .skills__title {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.footer__address {
+  margin-top: 20px;
+  font-style: normal;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -446,15 +456,6 @@ textarea {
 
 .footer__logo {
   color: #ffffff;
-}
-
-.team__name {
-  margin-bottom: 0px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.187;
-  letter-spacing: 0.03em;
-  color: #212121;
 }
 
 .footer {

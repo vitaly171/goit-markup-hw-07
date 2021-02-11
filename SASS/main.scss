@@ -1,5 +1,10 @@
 @import "utils/variables";
 @import "base/defaults";
+@import "components/header";
+@import "components/hero";
+@import "components/about";
+@import "components/skills";
+@import "components/team";
 
 // Commons *
 
@@ -66,283 +71,14 @@
   color: $title-cl;
 }
 
-// Header *
-
-.header {
-  border-bottom: 1px solid rgba(236, 236, 236, 1);
-}
-
-.header__conteiner {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.header__navigation {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  height: 80px;
-}
-
-.header__item {
-  position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: #212121;
-}
-
-.header__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.header .logo {
-  display: block;
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
-
-.header__logo {
-  color: #212121;
-}
-
-.header__contact-link {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-}
-
-.header__contact:not(:last-child) {
-  margin-right: 30px;
-}
-.header__icon-mail {
-  height: 12px;
-  width: 16px;
-  margin-right: 10px;
-  fill: $main-text-cl;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header__icon-tel {
-  height: 16px;
-  width: 10px;
-  margin-right: 10px;
-  fill: $main-text-cl;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header__contact {
-  align-items: center;
-}
-
-.header__contact-link:hover .header__icon-mail,
-.header__contact-link:focus .header__icon-mail {
-  fill: $accent-cl;
-}
-
-.header__contact-link:hover .header__icon-tel,
-.header__contact-link:focus .header__icon-tel {
-  fill: $accent-cl;
-}
-
-.about {
-  padding-bottom: 94px;
-}
-
-.about__list > .about__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.about__item {
-  position: relative;
-  height: 294px;
-}
-
-.about__overlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  background: rgba(47, 48, 58, 0.8);
-}
-.about__overlay-text {
-  margin: 0;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.143;
-  text-align: center;
-  color: $text-box;
-  text-transform: uppercase;
-}
-
-.skills__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  color: $title-cl;
-  text-transform: uppercase;
-}
 .footer .skills__title {
   color: $white;
   margin-bottom: 0;
-}
-.hero {
-  padding: 200px 452px;
-  max-width: 1600px;
-  max-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $gray-bg;
-  background-image: radial-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/bg-hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.hero__content {
-  width: 696px;
-}
-
-.hero__title {
-  margin-bottom: 0px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: $white;
-  text-align: center;
-}
-
-.hero__btn {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding: 10px 32px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 30px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  background-color: $accent-cl;
-  color: #ffffff;
-}
-.skills {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.skills__item {
-  display: flex;
-  flex-direction: column;
-  width: 270px;
-}
-.skills__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.skills__item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  margin-bottom: 30px;
-
-  background: $bg-icons;
-  background-size: 70px 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.skills__icon-antenna::before {
-  background-image: url(../images/icons/antenna.svg);
-}
-
-.skills__icon-clock::before {
-  background-image: url(../images/icons/clock.svg);
-}
-.skills__icon-diagram::before {
-  background-image: url(../images/icons/diagram.svg);
-}
-.skills__icon-astronaut::before {
-  background-image: url(../images/icons/astronaut.svg);
 }
 
 .footer__address {
   margin-top: 20px;
   font-style: normal;
-}
-
-.skills__text {
-  margin-top: 0%;
-  font-size: 14px;
-  line-height: 1.71;
-  color: $main-text-cl;
-}
-
-.team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: rgba(245, 244, 250, 1);
-}
-
-.team__item-box {
-  padding: 30px 32px;
-}
-
-.team__card {
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team__card:not(:last-child) {
-  margin-right: 30px;
-}
-.team__list {
-  margin-top: 50px;
-}
-
-.team__role-description {
-  margin-top: 10px;
-  font-size: 16px;
-  text-align: center;
-
-  line-height: 1.87;
-  color: $main-text-cl;
 }
 
 .logo {
@@ -356,15 +92,6 @@
 
 .footer__logo {
   color: #ffffff;
-}
-
-.team__name {
-  margin-bottom: 0px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.187;
-  letter-spacing: 0.03em;
-  color: $title-cl;
 }
 
 .footer {
