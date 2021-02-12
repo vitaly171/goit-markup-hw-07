@@ -24,6 +24,11 @@
 
   .social-icons__link {
     background-color: $soc-icon-footer-bg;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-cl;
+    }
   }
 
   .social-icons__svg {
